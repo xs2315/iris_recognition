@@ -5,7 +5,9 @@ Then, type: python IrisRecognition.py to run codes.
 The result will be printed and save in directory.
 
 The process:
+
 	1. read all images of train and test
+	
 	2. for each image in image set:
 			1) (optional) roughly detect pupil
 			2) using hough transform to detect pupil and iris
