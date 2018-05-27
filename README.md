@@ -41,6 +41,7 @@ The limitations:
 Function and variable explanations:
 
 get_pupil_roughly(img, binarize=False):
+
     """roughly localize pupil, using the method introduced in the paper.
     :param img: the input image
     :param binarize: whether binarize the img firstly
@@ -49,6 +50,7 @@ get_pupil_roughly(img, binarize=False):
     """
 
 detect_by_hough(img):
+
     """preprocess the image, then use hough transform to detect both pupil and iris.
     :param img: the input image
     :return: the circles of pupil and iris, (x, y, radius), (x, y, radius)
@@ -58,6 +60,7 @@ detect_by_hough(img):
     # in practice, I did use the roughly_localize method, since it is error-prone.
 	
 iris_normalization(img, pupil_circle, iris_circle, M=64, N=512, offset=0):
+
     """normalize the iris.
     :param img: the input img
     :param pupil_circle: (x, y, radius)
@@ -69,6 +72,7 @@ iris_normalization(img, pupil_circle, iris_circle, M=64, N=512, offset=0):
     """
 	
 trans_axis(circle, theta):
+
     """Changes polar coordinates to cartesian coordinate system.
     :param circle: (x, y, radius)
     :param theta: angle
@@ -77,6 +81,7 @@ trans_axis(circle, theta):
     """
 
 enhance_img(img):
+
     """actually, the enhance method is based on another Ma Li's paper.
         'Iris Recognition Based on Multichannel Gabor Filtering'
     :param img: the input img
@@ -111,6 +116,7 @@ defined_gabor_kernel(frequency, sigma_x=None, sigma_y=None,
     """
 	
 get_feature_vector(filtered_1, filtered_2):
+
     """As the paper denotes, this method generate the feature vector
     based on the two filtered image.
     :param filtered_1: the filtered image 1
@@ -122,6 +128,7 @@ get_feature_vector(filtered_1, filtered_2):
 predict_with_nearestcentroid(train_features, test_features,
                                  train_labels, test_labels,
                                  metric='cosine'):
+				 
     """using nearest center classifer to evaluate the results.
     :train_features, test_features: the feature vectors of train set and test set
     :train_labels, test_labels: the labels of train set and test set.
@@ -132,6 +139,7 @@ predict_with_nearestcentroid(train_features, test_features,
 	
 perform_fld(train_features, test_features,
                 train_labels, n_components=100):
+		
     """perform Fisher Linear Discriminant to get the reduced vectors.
     :train_features, test_features: the feature vectors of train set and test set
     :train_labels: we need the labels of train set to train.
