@@ -1,4 +1,5 @@
 # iris_recognition
+Data can be found from http://biometrics.idealtest.org/dbDetailForUser.do?id=1
 This procedure is based on Python 3.6.
 To run the procedure, please first install the requirements: pip install -r requirements.txt
 Then, type: python IrisRecognition.py to run codes.
