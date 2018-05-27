@@ -4,7 +4,7 @@ To run the procedure, please first install the requirements: pip install -r requ
 Then, type: python IrisRecognition.py to run codes.
 The result will be printed and save in directory.
 
-The process:
+#The process:
 	1. read all images of train and test
 	2. for each image in image set:
 			1) (optional) roughly detect pupil
@@ -24,7 +24,7 @@ The process:
 			2) calculate the FMR, FNMR for each threshold for each time.
 			3) calculate the mean and internal of each threshold
 			4) save csv & draw fig & save fig.
-	exit
+#	exit
 	
 
 The limitations:
