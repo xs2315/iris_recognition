@@ -29,7 +29,9 @@ The process:
 	
 
 The limitations:
+
 	1. This paper did not process the noises such like eyelid and eyelash, which really limit the performance. To remove noises such like eyelid and eyelash, we may apply canny edge detection and use Hough algorithm.
+	
 	2. This paper only use two channel of gabor filter, which can be thought as a small value. So, adding more kernals is a good idea.
 
 
